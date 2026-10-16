@@ -335,3 +335,12 @@ TEST(TBitField, my_own_three_or_operator_in_one_line)
     EXPECT_EQ(0, res.GetBit(3));
     EXPECT_EQ(0, res.GetBit(4));
 }
+
+TEST(TBitField, my_own_sum_of_odd_numbers)
+{
+    int sum = 1 + 3 + 5 + 7 + 9;
+    EXPECT_EQ(25, sum);   // 5^2
+
+    sum = 1 + 3 + 5 + 7 + 9 + 11;
+    EXPECT_EQ(36, sum);   // 6^2
+}
