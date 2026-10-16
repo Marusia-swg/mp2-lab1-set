@@ -18,8 +18,7 @@ set(MP2_LIBRARY "${PROJECT_NAME}")
 set(MP2_TESTS   "test_${PROJECT_NAME}")
 set(MP2_INCLUDE "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
-include_directories("${MP2_INCLUDE}" gtest)
-
+include_directories("${MP2_INCLUDE}" "${CMAKE_CURRENT_SOURCE_DIR}/gtest/include")
 # BUILD
 add_subdirectory(src)
 add_subdirectory(samples)
@@ -33,3 +32,5 @@ message( STATUS "======================================")
 message( STATUS "")
 message( STATUS "   Configuration: ${CMAKE_BUILD_TYPE}")
 message( STATUS "")
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED OFF)
