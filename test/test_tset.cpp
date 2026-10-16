@@ -295,3 +295,18 @@ TEST(TSet, check_negation_operator)
 
   EXPECT_EQ(expSet, set1);
 }
+
+TEST(TSet, my_own_three_sets_in_one_line)
+{
+    TSet set1(10), set2(10), set3(10);
+    set1.InsElem(1);
+    set2.InsElem(2);
+    set3.InsElem(3);
+
+    TSet res = set1 + set2 + set3;
+
+    EXPECT_EQ(1, res.IsMember(1));
+    EXPECT_EQ(1, res.IsMember(2));
+    EXPECT_EQ(1, res.IsMember(3));
+    EXPECT_EQ(0, res.IsMember(4));
+}
